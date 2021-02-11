@@ -4,8 +4,14 @@ import Home from '../views/Home.vue';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: {
+      name: 'home',
+    },
   },
 ];
 
