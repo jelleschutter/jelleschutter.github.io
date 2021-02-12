@@ -24,6 +24,7 @@ export type Repository = {
     watchers_count: number;
     language: string;
     forks_count: number;
+    archived: boolean;
     disabled: boolean;
     open_issues_count: number;
     license: string|null;

@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { faArchive, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import {
   faCopyright, faEnvelope, faFile, faStar,
 } from '@fortawesome/free-regular-svg-icons';
@@ -10,6 +10,7 @@ import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 
+library.add(faArchive);
 library.add(faCodeBranch);
 library.add(faCopyright);
 library.add(faEnvelope);

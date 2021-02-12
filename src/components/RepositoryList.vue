@@ -33,7 +33,7 @@ export default defineComponent({
 
     axios(config)
       .then((res: AxiosResponse<RepositoryModel[]>) => {
-        repos.value = res.data.filter((repo) => !repo.fork);
+        repos.value = res.data;
       })
       .catch((error: Error) => {
         console.log(error);

@@ -1,7 +1,11 @@
 <template>
   <a class="gh-repo-container" :href="repo.html_url">
     <div class="gh-repo">
-      <h2 class="title">{{ repo.name }}</h2>
+      <h2 class="title">
+        {{ repo.name }}
+        <fa-icon class="title-icon" icon="archive" v-if="repo.archived"/>
+        <fa-icon class="title-icon" icon="code-branch" v-if="!repo.archived && repo.fork"/>
+      </h2>
       <p class="last-update">Last updated {{ lastUpdate }}</p>
       <p class="description" v-if="typeof repo.description === 'string'">{{ repo.description }}</p>
       <div class="tags">
