@@ -7,7 +7,7 @@ const routes: RouteRecordRaw[] = [
     name: 'home',
     component: Home,
     meta: {
-      title: 'Home',
+      title: 'Jelle Schutter',
     },
   },
   {
@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
   if (typeof title === 'undefined') {
     document.title = 'Jelle Schutter';
   } else {
-    document.title = `${title} / Jelle Schutter`;
+    document.title = title;
   }
   next();
 });
