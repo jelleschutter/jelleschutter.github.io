@@ -25,7 +25,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const { title } = to.meta;
-  if (typeof title === 'undefined') {
+  if (typeof title !== 'string') {
     document.title = 'Jelle Schutter';
   } else {
     document.title = title;
